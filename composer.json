@@ -1,5 +1,5 @@
 {
-    "name": "yogarine/bungie-sdk-php",
+    "name": "yogarine/bungie-d1-sdk-php",
     "description": "These are legacy endpoints for Destiny 1 that are no longer supported officially by Bungie.",
     "keywords": [
         "openapitools",
