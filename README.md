@@ -57,10 +57,18 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\DestinyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $inlineObject1 = new InlineObject1(); // \Bungie\D1\Model\inline_object_1 | 
 
@@ -275,7 +283,31 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## apiKey
+
+- **Type**: API key
+- **API key parameter name**: X-API-Key
+- **Location**: HTTP header
+
+## oauth2
+
+- **Type**: OAuth
+- **Flow**: accessCode
+- **Authorization URL**: https://www.bungie.net/en/OAuth/Authorize
+- **Scopes**: 
+ - **ReadBasicUserProfile**: Read basic user profile information such as the user's handle, avatar icon, etc.
+ - **ReadGroups**: Read Group/Clan Forums, Wall, and Members for groups and clans that the   user has joined.
+ - **WriteGroups**: Write Group/Clan Forums, Wall, and Members for groups and clans that the   user has joined.
+ - **AdminGroups**: Administer Group/Clan Forums, Wall, and Members for groups and clans that the   user is a founder or an administrator.
+ - **BnetWrite**: Create new groups, clans, and forum posts.
+ - **MoveEquipDestinyItems**: Move or equip Destiny items
+ - **ReadDestinyInventoryAndVault**: Read Destiny 1 Inventory and Vault contents.  For Destiny 2, this scope is needed to read anything regarded as private. This is the only scope a  Destiny 2 app needs for read operations against Destiny 2 data such as inventory, vault, currency,  vendors, milestones, progression, etc.
+ - **ReadUserData**: Read user data such as who they are web notifications,   clan/group memberships, recent activity, muted users.
+ - **EditUserData**: Edit user data such as preferred language, status, motto, avatar selection and theme.
+ - **ReadDestinyVendorsAndAdvisors**: Access vendor and advisor data specific to a user. OBSOLETE. This scope is only used on the Destiny 1 API.
+ - **ReadAndApplyTokens**: Read offer history and claim and apply tokens for the user.
+ - **AdvancedWriteActions**: Can perform actions that will result in a prompt to the user via the Destiny app.
 
 
 ## Author

@@ -78,10 +78,18 @@ Equips an item from a character's inventory. The endpoint will fail if the chara
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $inlineObject1 = new InlineObject1(); // \Bungie\D1\Model\inline_object_1 | 
 
@@ -106,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -127,10 +135,18 @@ Equips multiple items from a character's inventory and returns the updated inven
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $inlineObject2 = new InlineObject2(); // \Bungie\D1\Model\inline_object_2 | 
 
@@ -155,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -176,10 +192,16 @@ Returns Destiny account information for the supplied membership.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -208,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -227,10 +249,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -259,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -278,10 +306,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $param1 = 'param1_example'; // string | 
 
@@ -306,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -327,10 +361,16 @@ Returns recent activity history for a given character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -367,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -386,10 +426,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -418,7 +464,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -439,10 +485,16 @@ Returns advisor information about a given character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -473,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -492,10 +544,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -526,7 +584,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -547,10 +605,16 @@ Returns advisor information about a given character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $characterId = 'characterId_example'; // string | 
@@ -579,7 +643,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -600,10 +664,16 @@ Returns all items for a given account.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -632,7 +702,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -651,10 +721,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $characterId = 'characterId_example'; // string | 
@@ -683,7 +759,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -702,10 +778,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $definitions = True; // bool | Include definitions in the response. Use while testing.
@@ -732,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -753,10 +835,16 @@ Returns Destiny character information with a given characterId. This endpoint is
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -787,7 +875,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -808,10 +896,16 @@ Returns activity progress for a given character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -842,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -863,10 +957,16 @@ Returns the inventory of a Destiny character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -897,7 +997,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -916,10 +1016,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -950,7 +1056,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -971,10 +1077,16 @@ Returns progression information for a given Destiny character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1005,7 +1117,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1026,10 +1138,16 @@ Returns Destiny character information for the given characterId.<br/>To get a mo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1060,7 +1178,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1079,10 +1197,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $clanId = 56; // int | A valid clan ID.
 $modes = array(new \Bungie\D1\Model\Destiny\ActivityModeType()); // \Bungie\D1\Model\Destiny\ActivityModeType[] | Game modes to return. Comma separated.
@@ -1113,7 +1237,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1134,10 +1258,16 @@ Gets all activities the character has participated in together with aggregate st
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1168,7 +1298,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1189,10 +1319,16 @@ Advanced InventoryItem search.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $count = 56; // int | The number of results to return. Default is 10.
 $name = 'name_example'; // string | Filter by name.
@@ -1251,7 +1387,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1272,10 +1408,16 @@ Advanced search for TalentNodes.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $page = 56; // int | The current page to return. Starts at 1.
 $count = 56; // int | The number of results per page. Default is 10.
@@ -1318,7 +1460,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1339,10 +1481,16 @@ Returns a list of \"tiles\" used on the Bungie.net website.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -1363,7 +1511,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1384,10 +1532,16 @@ Returns the current version of the Destiny 1 mobile manifest as a json object.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -1407,7 +1561,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1428,10 +1582,16 @@ Returns a single definition from the manifest as json object.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $definitionType = new \Bungie\D1\Model\Destiny\DefinitionType(); // \Bungie\D1\Model\Destiny\DefinitionType | 
 $definitionId = 56; // int | 
@@ -1462,7 +1622,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1483,10 +1643,16 @@ Returns Destiny excellence badges for a given account. No longer in use.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1515,7 +1681,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1536,10 +1702,16 @@ Returns the Grimoire for a given account.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1572,7 +1744,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1593,10 +1765,16 @@ Returns Grimoire definitions. This is the equivalent pulling the [[GrimoireDefin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -1617,7 +1795,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1638,10 +1816,16 @@ Returns historical stat information about a given Destiny character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1684,7 +1868,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1703,10 +1887,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -1727,7 +1917,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1748,10 +1938,16 @@ Gets aggregate historical stats organized around each character for a given acco
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1780,7 +1976,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1799,10 +1995,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1835,7 +2037,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1854,10 +2056,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $param1 = 'param1_example'; // string | 
 $param2 = 'param2_example'; // string | 
@@ -1890,7 +2098,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1911,10 +2119,16 @@ Returns leaderboard stats compared against friends. Note you may need to re-auth
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -1947,7 +2161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -1966,10 +2180,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $param1 = 'param1_example'; // string | 
 $param2 = 'param2_example'; // string | 
@@ -2004,7 +2224,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2025,10 +2245,16 @@ Returns leaderboard stats compared against PSN friends. Note, you may need re-au
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $modes = array(new \Bungie\D1\Model\Destiny\ActivityModeType()); // \Bungie\D1\Model\Destiny\ActivityModeType[] | Game modes to return. Comma separated.
 $code = 'code_example'; // string | 
@@ -2055,7 +2281,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2076,10 +2302,16 @@ Returns the numerical id of a player based on their display name, zero if not fo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $displayName = 'displayName_example'; // string | A valid PSN Id or Gamertag display name.
@@ -2108,7 +2340,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2129,10 +2361,16 @@ Returns the Grimoire for the currently signed in account.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $definitions = True; // bool | Include definitions in the response. Use while testing.
@@ -2163,7 +2401,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2184,10 +2422,16 @@ Gets the available post game carnage report for the activity ID.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $activityInstanceId = 56; // int | A valid activityInstanceId.
 $definitions = True; // bool | Include definitions in the response. Use while testing.
@@ -2214,7 +2458,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2235,10 +2479,16 @@ Returns information about current daily, weekly and special events.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $definitions = True; // bool | Include definitions in the response. Use while testing.
 
@@ -2263,7 +2513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2282,10 +2532,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $definitions = True; // bool | Include definitions in the response. Use while testing.
 
@@ -2310,7 +2566,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2331,10 +2587,16 @@ Returns Public information for a given Vendor.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $vendorHash = 56; // int | A valid vendorHash.
 $definitions = True; // bool | Include definitions in the response. Use while testing.
@@ -2361,7 +2623,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2382,10 +2644,16 @@ Returns Public information for a given Vendor, with metadata.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $vendorHash = 56; // int | A valid vendorHash.
 $definitions = True; // bool | Include definitions in the response. Use while testing.
@@ -2412,7 +2680,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2433,10 +2701,16 @@ Returns advisor information about the vendor Xur in Destiny.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $definitions = True; // bool | Include definitions in the response. Use while testing.
 
@@ -2461,7 +2735,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2480,10 +2754,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $recordBookHash = 56; // int | 
@@ -2512,7 +2792,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2533,10 +2813,16 @@ Returns a list of currently active events.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $definitions = True; // bool | Include definitions in the response. Use while testing.
 
@@ -2561,7 +2847,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2582,10 +2868,16 @@ Returns a list of triumph sets for a given account.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -2614,7 +2906,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2635,10 +2927,16 @@ Gets details about unique weapon usage, including all exotic weapons.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $destinyMembershipId = 56; // int | Destiny membership ID.
@@ -2669,7 +2967,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2690,10 +2988,18 @@ Returns the contents of player's Vault.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $definitions = True; // bool | Include definitions in the response. Use while testing.
@@ -2722,7 +3028,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -2741,10 +3047,18 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $definitions = True; // bool | Include definitions in the response. Use while testing.
@@ -2773,7 +3087,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -2794,10 +3108,16 @@ Returns information about a Vendor for a given Destiny character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $characterId = 'characterId_example'; // string | 
@@ -2828,7 +3148,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2849,10 +3169,16 @@ Returns information about a Vendor for a given Destiny character with metadata.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $characterId = 'characterId_example'; // string | 
@@ -2883,7 +3209,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2902,10 +3228,16 @@ No authorization required
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $characterId = 'characterId_example'; // string | 
@@ -2938,7 +3270,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -2959,10 +3291,16 @@ Returns an item from a Vendor's inventory for a given character with metadata.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $characterId = 'characterId_example'; // string | 
@@ -2995,7 +3333,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -3016,10 +3354,16 @@ Returns a summary of Vendors for a given Destiny character.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $characterId = 'characterId_example'; // string | 
@@ -3048,7 +3392,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -3069,10 +3413,16 @@ Returns a list of players by username and platform.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $membershipType = new \Bungie\D1\Model\BungieMembershipType(); // \Bungie\D1\Model\BungieMembershipType | The type of account for which info will be extracted.
 $displayName = 'displayName_example'; // string | A valid display name to search for.
@@ -3099,7 +3449,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -3120,10 +3470,18 @@ Changes the lock state on an equipable item.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $inlineObject3 = new InlineObject3(); // \Bungie\D1\Model\inline_object_3 | 
 
@@ -3148,7 +3506,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -3169,10 +3527,18 @@ Set the track state of a given quest.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $inlineObject4 = new InlineObject4(); // \Bungie\D1\Model\inline_object_4 | 
 
@@ -3197,7 +3563,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -3218,10 +3584,18 @@ Moves items to and from a character and the vault.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: apiKey
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Bungie\D1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+// Configure OAuth2 access token for authorization: oauth2
+$config = Bungie\D1\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 $apiInstance = new Bungie\D1\Api\UnofficialApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $inlineObject = new InlineObject(); // \Bungie\D1\Model\inline_object | 
 
@@ -3246,7 +3620,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../../README.md#apiKey), [oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
