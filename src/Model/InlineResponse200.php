@@ -57,7 +57,7 @@ class InlineResponse200 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\D1\Model\Destiny\GetPublicAdvisorsV2',
+        'response' => 'map[string,object]',
         'errorCode' => '\Bungie\D1\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
@@ -237,7 +237,7 @@ class InlineResponse200 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\D1\Model\Destiny\GetPublicAdvisorsV2|null
+     * @return map[string,object]|null
      */
     public function getResponse()
     {
@@ -247,7 +247,7 @@ class InlineResponse200 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\D1\Model\Destiny\GetPublicAdvisorsV2|null $response response
+     * @param map[string,object]|null $response response
      *
      * @return $this
      */

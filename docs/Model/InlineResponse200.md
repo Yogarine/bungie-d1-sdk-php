@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Bungie\D1\Model\Destiny\GetPublicAdvisorsV2**](GetPublicAdvisorsV2.md) |  | [optional] 
+**response** | **map[string,object]** |  | [optional] 
 **errorCode** | [**\Bungie\D1\Model\Exceptions\PlatformErrorCodes**](PlatformErrorCodes.md) |  | [optional] 
 **throttleSeconds** | **int** |  | [optional] 
 **errorStatus** | **string** |  | [optional] 
