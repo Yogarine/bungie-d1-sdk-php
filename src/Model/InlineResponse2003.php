@@ -57,12 +57,13 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response' => '\Bungie\D1\Model\Destiny\GetDestinySingleDefinition',
+        'response' => '\Bungie\D1\Model\Destiny\Responses\DestinyCharacterResponse',
         'errorCode' => '\Bungie\D1\Model\Exceptions\PlatformErrorCodes',
         'throttleSeconds' => 'int',
         'errorStatus' => 'string',
         'message' => 'string',
-        'messageData' => 'map[string,string]'
+        'messageData' => 'map[string,string]',
+        'detailedErrorTrace' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
         'throttleSeconds' => 'int32',
         'errorStatus' => null,
         'message' => null,
-        'messageData' => null
+        'messageData' => null,
+        'detailedErrorTrace' => null
     ];
 
     /**
@@ -111,7 +113,8 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
         'throttleSeconds' => 'ThrottleSeconds',
         'errorStatus' => 'ErrorStatus',
         'message' => 'Message',
-        'messageData' => 'MessageData'
+        'messageData' => 'MessageData',
+        'detailedErrorTrace' => 'DetailedErrorTrace'
     ];
 
     /**
@@ -125,7 +128,8 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
         'throttleSeconds' => 'setThrottleSeconds',
         'errorStatus' => 'setErrorStatus',
         'message' => 'setMessage',
-        'messageData' => 'setMessageData'
+        'messageData' => 'setMessageData',
+        'detailedErrorTrace' => 'setDetailedErrorTrace'
     ];
 
     /**
@@ -139,7 +143,8 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
         'throttleSeconds' => 'getThrottleSeconds',
         'errorStatus' => 'getErrorStatus',
         'message' => 'getMessage',
-        'messageData' => 'getMessageData'
+        'messageData' => 'getMessageData',
+        'detailedErrorTrace' => 'getDetailedErrorTrace'
     ];
 
     /**
@@ -208,6 +213,7 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
         $this->container['errorStatus'] = isset($data['errorStatus']) ? $data['errorStatus'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['messageData'] = isset($data['messageData']) ? $data['messageData'] : null;
+        $this->container['detailedErrorTrace'] = isset($data['detailedErrorTrace']) ? $data['detailedErrorTrace'] : null;
     }
 
     /**
@@ -237,7 +243,7 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
     /**
      * Gets response
      *
-     * @return \Bungie\D1\Model\Destiny\GetDestinySingleDefinition|null
+     * @return \Bungie\D1\Model\Destiny\Responses\DestinyCharacterResponse|null
      */
     public function getResponse()
     {
@@ -247,7 +253,7 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
     /**
      * Sets response
      *
-     * @param \Bungie\D1\Model\Destiny\GetDestinySingleDefinition|null $response response
+     * @param \Bungie\D1\Model\Destiny\Responses\DestinyCharacterResponse|null $response response
      *
      * @return $this
      */
@@ -374,6 +380,30 @@ class InlineResponse2003 implements \Bungie\D1\Model\ModelInterface, ArrayAccess
     public function setMessageData($messageData)
     {
         $this->container['messageData'] = $messageData;
+
+        return $this;
+    }
+
+    /**
+     * Gets detailedErrorTrace
+     *
+     * @return string|null
+     */
+    public function getDetailedErrorTrace()
+    {
+        return $this->container['detailedErrorTrace'];
+    }
+
+    /**
+     * Sets detailedErrorTrace
+     *
+     * @param string|null $detailedErrorTrace detailedErrorTrace
+     *
+     * @return $this
+     */
+    public function setDetailedErrorTrace($detailedErrorTrace)
+    {
+        $this->container['detailedErrorTrace'] = $detailedErrorTrace;
 
         return $this;
     }

@@ -95,7 +95,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return \Bungie\D1\Model\InlineResponse200
+     * @return \Bungie\D1\Model\InlineResponse2004
      */
     public function equipItem($inlineObject1 = null)
     {
@@ -111,7 +111,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return array of \Bungie\D1\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bungie\D1\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function equipItemWithHttpInfo($inlineObject1 = null)
     {
@@ -148,20 +148,20 @@ class UnofficialApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Bungie\D1\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\Bungie\D1\Model\InlineResponse2004' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse2004', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Bungie\D1\Model\InlineResponse200';
+            $returnType = '\Bungie\D1\Model\InlineResponse2004';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -180,7 +180,7 @@ class UnofficialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bungie\D1\Model\InlineResponse200',
+                        '\Bungie\D1\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +222,7 @@ class UnofficialApi
      */
     public function equipItemAsyncWithHttpInfo($inlineObject1 = null)
     {
-        $returnType = '\Bungie\D1\Model\InlineResponse200';
+        $returnType = '\Bungie\D1\Model\InlineResponse2004';
         $request = $this->equipItemRequest($inlineObject1);
 
         return $this->client
@@ -365,7 +365,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return \Bungie\D1\Model\InlineResponse200
+     * @return \Bungie\D1\Model\InlineResponse2005
      */
     public function equipItems($inlineObject2 = null)
     {
@@ -381,7 +381,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return array of \Bungie\D1\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bungie\D1\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function equipItemsWithHttpInfo($inlineObject2 = null)
     {
@@ -418,20 +418,20 @@ class UnofficialApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Bungie\D1\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\Bungie\D1\Model\InlineResponse2005' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse2005', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Bungie\D1\Model\InlineResponse200';
+            $returnType = '\Bungie\D1\Model\InlineResponse2005';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -450,7 +450,7 @@ class UnofficialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bungie\D1\Model\InlineResponse200',
+                        '\Bungie\D1\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -492,7 +492,7 @@ class UnofficialApi
      */
     public function equipItemsAsyncWithHttpInfo($inlineObject2 = null)
     {
-        $returnType = '\Bungie\D1\Model\InlineResponse200';
+        $returnType = '\Bungie\D1\Model\InlineResponse2005';
         $request = $this->equipItemsRequest($inlineObject2);
 
         return $this->client
@@ -4030,7 +4030,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return \Bungie\D1\Model\InlineResponse200
+     * @return \Bungie\D1\Model\InlineResponse2003
      */
     public function getCharacter($membershipType, $destinyMembershipId, $characterId, $definitions = null)
     {
@@ -4049,7 +4049,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return array of \Bungie\D1\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bungie\D1\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCharacterWithHttpInfo($membershipType, $destinyMembershipId, $characterId, $definitions = null)
     {
@@ -4086,20 +4086,20 @@ class UnofficialApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Bungie\D1\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\Bungie\D1\Model\InlineResponse2003' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse2003', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Bungie\D1\Model\InlineResponse200';
+            $returnType = '\Bungie\D1\Model\InlineResponse2003';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -4118,7 +4118,7 @@ class UnofficialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bungie\D1\Model\InlineResponse200',
+                        '\Bungie\D1\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4166,7 +4166,7 @@ class UnofficialApi
      */
     public function getCharacterAsyncWithHttpInfo($membershipType, $destinyMembershipId, $characterId, $definitions = null)
     {
-        $returnType = '\Bungie\D1\Model\InlineResponse200';
+        $returnType = '\Bungie\D1\Model\InlineResponse2003';
         $request = $this->getCharacterRequest($membershipType, $destinyMembershipId, $characterId, $definitions);
 
         return $this->client
@@ -7633,7 +7633,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return \Bungie\D1\Model\InlineResponse200
+     * @return \Bungie\D1\Model\InlineResponse2001
      */
     public function getDestinyManifest()
     {
@@ -7648,7 +7648,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return array of \Bungie\D1\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bungie\D1\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDestinyManifestWithHttpInfo()
     {
@@ -7685,20 +7685,20 @@ class UnofficialApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Bungie\D1\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\Bungie\D1\Model\InlineResponse2001' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse2001', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Bungie\D1\Model\InlineResponse200';
+            $returnType = '\Bungie\D1\Model\InlineResponse2001';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -7717,7 +7717,7 @@ class UnofficialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bungie\D1\Model\InlineResponse200',
+                        '\Bungie\D1\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7757,7 +7757,7 @@ class UnofficialApi
      */
     public function getDestinyManifestAsyncWithHttpInfo()
     {
-        $returnType = '\Bungie\D1\Model\InlineResponse200';
+        $returnType = '\Bungie\D1\Model\InlineResponse2001';
         $request = $this->getDestinyManifestRequest();
 
         return $this->client
@@ -17379,7 +17379,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return \Bungie\D1\Model\InlineResponse200
+     * @return \Bungie\D1\Model\InlineResponse2002
      */
     public function searchDestinyPlayer($membershipType, $displayName)
     {
@@ -17396,7 +17396,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return array of \Bungie\D1\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bungie\D1\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchDestinyPlayerWithHttpInfo($membershipType, $displayName)
     {
@@ -17433,20 +17433,20 @@ class UnofficialApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Bungie\D1\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\Bungie\D1\Model\InlineResponse2002' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse2002', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Bungie\D1\Model\InlineResponse200';
+            $returnType = '\Bungie\D1\Model\InlineResponse2002';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -17465,7 +17465,7 @@ class UnofficialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bungie\D1\Model\InlineResponse200',
+                        '\Bungie\D1\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -17509,7 +17509,7 @@ class UnofficialApi
      */
     public function searchDestinyPlayerAsyncWithHttpInfo($membershipType, $displayName)
     {
-        $returnType = '\Bungie\D1\Model\InlineResponse200';
+        $returnType = '\Bungie\D1\Model\InlineResponse2002';
         $request = $this->searchDestinyPlayerRequest($membershipType, $displayName);
 
         return $this->client
@@ -18214,7 +18214,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return \Bungie\D1\Model\InlineResponse200
+     * @return \Bungie\D1\Model\InlineResponse2004
      */
     public function transferItem($inlineObject = null)
     {
@@ -18230,7 +18230,7 @@ class UnofficialApi
      * @throws \Bungie\D1\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return array of \Bungie\D1\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Bungie\D1\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function transferItemWithHttpInfo($inlineObject = null)
     {
@@ -18267,20 +18267,20 @@ class UnofficialApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Bungie\D1\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\Bungie\D1\Model\InlineResponse2004' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\Bungie\D1\Model\InlineResponse2004', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Bungie\D1\Model\InlineResponse200';
+            $returnType = '\Bungie\D1\Model\InlineResponse2004';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -18299,7 +18299,7 @@ class UnofficialApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Bungie\D1\Model\InlineResponse200',
+                        '\Bungie\D1\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -18341,7 +18341,7 @@ class UnofficialApi
      */
     public function transferItemAsyncWithHttpInfo($inlineObject = null)
     {
-        $returnType = '\Bungie\D1\Model\InlineResponse200';
+        $returnType = '\Bungie\D1\Model\InlineResponse2004';
         $request = $this->transferItemRequest($inlineObject);
 
         return $this->client

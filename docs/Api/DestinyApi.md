@@ -67,7 +67,7 @@ Method | HTTP request | Description
 
 
 # **equipItem**
-> \Bungie\D1\Model\InlineResponse200 equipItem($inlineObject1)
+> \Bungie\D1\Model\InlineResponse2004 equipItem($inlineObject1)
 
 
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\D1\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bungie\D1\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **equipItems**
-> \Bungie\D1\Model\InlineResponse200 equipItems($inlineObject2)
+> \Bungie\D1\Model\InlineResponse2005 equipItems($inlineObject2)
 
 
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\D1\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bungie\D1\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -824,7 +824,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharacter**
-> \Bungie\D1\Model\InlineResponse200 getCharacter($membershipType, $destinyMembershipId, $characterId, $definitions)
+> \Bungie\D1\Model\InlineResponse2003 getCharacter($membershipType, $destinyMembershipId, $characterId, $definitions)
 
 
 
@@ -871,7 +871,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\D1\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bungie\D1\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -1521,7 +1521,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDestinyManifest**
-> \Bungie\D1\Model\InlineResponse200 getDestinyManifest()
+> \Bungie\D1\Model\InlineResponse2001 getDestinyManifest()
 
 
 
@@ -1558,7 +1558,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bungie\D1\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bungie\D1\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -3403,7 +3403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchDestinyPlayer**
-> \Bungie\D1\Model\InlineResponse200 searchDestinyPlayer($membershipType, $displayName)
+> \Bungie\D1\Model\InlineResponse2002 searchDestinyPlayer($membershipType, $displayName)
 
 
 
@@ -3446,7 +3446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\D1\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bungie\D1\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -3574,7 +3574,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **transferItem**
-> \Bungie\D1\Model\InlineResponse200 transferItem($inlineObject)
+> \Bungie\D1\Model\InlineResponse2004 transferItem($inlineObject)
 
 
 
@@ -3617,7 +3617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bungie\D1\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Bungie\D1\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
