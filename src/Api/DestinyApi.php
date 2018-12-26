@@ -6178,7 +6178,7 @@ class DestinyApi
 
         // query params
         if (is_array($modes)) {
-            $modes = ObjectSerializer::serializeCollection($modes, 'multi', true);
+            $modes = ObjectSerializer::serializeCollection($modes, 'multi', false);
         }
         if ($modes !== null) {
             $queryParams['modes'] = ObjectSerializer::toQueryValue($modes);
@@ -6889,7 +6889,7 @@ class DestinyApi
         }
         // query params
         if (is_array($damageTypes)) {
-            $damageTypes = ObjectSerializer::serializeCollection($damageTypes, 'multi', true);
+            $damageTypes = ObjectSerializer::serializeCollection($damageTypes, 'multi', false);
         }
         if ($damageTypes !== null) {
             $queryParams['damageTypes'] = ObjectSerializer::toQueryValue($damageTypes);
@@ -7268,7 +7268,7 @@ class DestinyApi
         }
         // query params
         if (is_array($damageTypes)) {
-            $damageTypes = ObjectSerializer::serializeCollection($damageTypes, 'multi', true);
+            $damageTypes = ObjectSerializer::serializeCollection($damageTypes, 'multi', false);
         }
         if ($damageTypes !== null) {
             $queryParams['damageTypes'] = ObjectSerializer::toQueryValue($damageTypes);
@@ -9345,14 +9345,14 @@ class DestinyApi
         }
         // query params
         if (is_array($modes)) {
-            $modes = ObjectSerializer::serializeCollection($modes, 'multi', true);
+            $modes = ObjectSerializer::serializeCollection($modes, 'multi', false);
         }
         if ($modes !== null) {
             $queryParams['modes'] = ObjectSerializer::toQueryValue($modes);
         }
         // query params
         if (is_array($groups)) {
-            $groups = ObjectSerializer::serializeCollection($groups, 'multi', true);
+            $groups = ObjectSerializer::serializeCollection($groups, 'multi', false);
         }
         if ($groups !== null) {
             $queryParams['groups'] = ObjectSerializer::toQueryValue($groups);
@@ -10943,7 +10943,7 @@ class DestinyApi
 
         // query params
         if (is_array($modes)) {
-            $modes = ObjectSerializer::serializeCollection($modes, 'multi', true);
+            $modes = ObjectSerializer::serializeCollection($modes, 'multi', false);
         }
         if ($modes !== null) {
             $queryParams['modes'] = ObjectSerializer::toQueryValue($modes);
@@ -11584,7 +11584,7 @@ class DestinyApi
 
         // query params
         if (is_array($modes)) {
-            $modes = ObjectSerializer::serializeCollection($modes, 'multi', true);
+            $modes = ObjectSerializer::serializeCollection($modes, 'multi', false);
         }
         if ($modes !== null) {
             $queryParams['modes'] = ObjectSerializer::toQueryValue($modes);
